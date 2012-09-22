@@ -1,0 +1,264 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+		]
+	},
+	"buffers":
+	[
+		{
+			"contents": "require 'spec_helper'\n\ndescribe \"StaticPages\" do\n\n	let(:base_title) { \"Ruby on Rails Tutorial Sample App\" }\n\n  describe \"Home page\" do\n 	it \"should have the header 'Sample  App'\" do\n      visit '/static_pages/home'\n      page.should have_selector('h1', :text => 'Sample App')\n   	end\n\n   	it \"should have the title 'Home'\" do\n   		visit '/static_pages/home'\n   		page.should have_selector('title',\n   				:text => \"#{base_title} | Home\")\n   	end\n  end\n\n  describe \"Help page\" do\n\n    it \"should have the header 'Help'\" do\n      visit '/static_pages/help'\n      page.should have_selector('h1', :text => 'Help')\n    end\n\n     it \"should have the title 'Help'\" do\n   		visit '/static_pages/help'\n   		page.should have_selector('title',\n   				:text => \"#{base_title} | Help\")\n   	end\n  end\n\n  describe \"About page\" do\n\n    it \"should have the header 'About Us'\" do\n      visit '/static_pages/about'\n      page.should have_selector('h1', :text => 'About Us')\n    end\n\n   	it \"should have the title 'About Us'\" do\n   		visit '/static_pages/about'\n   		page.should have_selector('title',\n   				:text => \"#{base_title} | About Us\")\n   	end\n  end\n\n  describe \"Contact page\" do\n\n    it \"should have the header 'Contact'\" do\n      visit '/static_pages/contact'\n      page.should have_selector('h1', :text => 'Contact')\n    end\n\n   	it \"should have the title 'Contact'\" do\n   		visit '/static_pages/contact'\n   		page.should have_selector('title',\n   				:text => \"#{base_title} | Contact\")\n   	end\n  end\n\nend\n",
+			"file": "spec/requests/static_pages_spec.rb",
+			"file_size": 1500,
+			"file_write_time": 1347933365000000,
+			"settings":
+			{
+				"buffer_size": 1500,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<% provide(:title, 'Home') %>\n<h1>Sample App</h1>\n<p>\n	This is the home page for the\n	<a href=\"http://railstutorial.org/\">Ruby on Rails Tutorial</a>\n	sample application.\n</p>\n",
+			"file": "app/views/static_pages/home.html.erb",
+			"file_size": 175,
+			"file_write_time": 1347603879000000,
+			"settings":
+			{
+				"buffer_size": 175,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 192.0,
+		"selected_items":
+		[
+			[
+				"",
+				"Package Control: Install Package"
+			]
+		],
+		"width": 279.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/Pete/Sites/rails_projects/sample_app/spec/spec_helper.rb",
+		"/Users/Pete/Sites/rails_projects/sample_app/Gemfile",
+		"/Users/Pete/Sites/rails_projects/sample_app/Guardfile",
+		"/Users/Pete/Sites/rails_projects/sample_app/.rspec",
+		"/Users/Pete/Desktop/Technology I am playing with:",
+		"/usr/bin/spec/requests/static_pages_spec.rb",
+		"/Users/Pete/Sites/rails_projects/sample_app/spec/requests/static_pages_spec.rb",
+		"/Users/Pete/Library/Application Support/Sublime Text 2/Packages/User/Preferences.sublime-settings",
+		"/Users/Pete/Library/Application Support/Sublime Text 2/Packages/Default/Preferences.sublime-settings",
+		"/usr/bin/subl",
+		"/usr/local/bin/subl",
+		"/Users/Pete/Sites/rails_projects/sample_app/README.rdoc",
+		"/Users/Pete/Sites/rails_projects/sample_app/doc/diagrams.rake",
+		"/Users/Pete/Sites/rails_projects/sample_app/lib/tasks/diagrams.rake",
+		"/Users/Pete/Sites/blog/Rakefile",
+		"/Users/Pete/Sites/blog/Gemfile",
+		"/Users/Pete/Sites/rails_projects/demo_app/config/routes.rb",
+		"/Users/Pete/Sites/rails_projects/demo_app/app/controllers/users_controller.rb",
+		"/Users/Pete/Sites/rails_projects/demo_app/app/controllers/microposts_controller.rb",
+		"/Users/Pete/Sites/rails_projects/demo_app/app/models/micropost.rb",
+		"/Users/Pete/Sites/rails_projects/demo_app/app/models/user.rb",
+		"/Users/Pete/Sites/rails_projects/first_app/public/index.html",
+		"/Users/Pete/Sites/rails_projects/first_app/README.md",
+		"/Users/Pete/Sites/rails_projects/first_app/.git/COMMIT_EDITMSG",
+		"/Users/Pete/Sites/rails_projects/first_app/Gemfile",
+		"/Users/Pete/.gemrc",
+		"/Users/Pete/Library/Application Support/Sublime Text 2/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/Pete/Library/Application Support/Sublime Text 2/Packages/User/RubyTest.sublime-settings",
+		"/Users/Pete/Library/Application Support/Sublime Text 2/Packages/Theme - Default/Widget.sublime-settings"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+			""
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"growl",
+			"new",
+			"test",
+			"erb"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "spec/requests/static_pages_spec.rb",
+					"settings":
+					{
+						"buffer_size": 1500,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								397,
+								397
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/User/RSpec.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 0,
+			"sheets":
+			[
+				{
+					"buffer": 1,
+					"file": "app/views/static_pages/home.html.erb",
+					"settings":
+					{
+						"buffer_size": 175,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								175,
+								175
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/Rails/HTML (Rails).tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.512581062848,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"selected_items":
+		[
+		],
+		"width": 380.0
+	},
+	"show_minimap": false,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": false,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
