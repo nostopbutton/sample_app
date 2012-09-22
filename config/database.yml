@@ -29,6 +29,6 @@ test:
 # production:
 #   adapter: postgresql
 #   encoding: unicode
-#   database:
-#   username:
+#   database: sample_production
+#   username: 
 #   password:
