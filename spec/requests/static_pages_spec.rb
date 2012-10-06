@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe "StaticPages" do
 
-	# let(:base_title) { "Ruby on Rails Tutorial Sample App" }
-
   # Ensure the 'should' function is automatically called on the 'page' object
   # 'page' object is automatically supplied by Caypbara 
   subject { page } 
@@ -14,12 +12,6 @@ describe "StaticPages" do
   end
 
   describe "Home page" do
-    # ---- exmaple of tests before refactoring ----
-    # it "should have the header 'Sample App'" do
-    #   visit '/static_pages/home'
-    #   page.should have_selector('h1', text: 'Sample App')
-    # end
-
     before { visit root_path }
     let(:heading)     { 'Sample App' }
     let(:page_title)  { '' }
