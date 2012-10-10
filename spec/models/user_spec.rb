@@ -15,7 +15,7 @@
 require 'spec_helper'
 
 describe User do
-  
+
   before do
     @user = User.new(name: "Example User", email: "user@example.com", password: "foobar", password_confirmation: "foobar")
   end
@@ -31,8 +31,14 @@ describe User do
   it { should respond_to(:admin) }
   it { should respond_to(:authenticate) }
 
+  # TOOD: test that mass assignment on
+  it { should_not allow_mass_assignment_of(:admin) }
+  it { should_not allow_mass_assignment_of(:password_digest) }
+  it { should_not allow_mass_assignment_of(:id) }  
+
   it { should be_valid }
   it { should_not be_admin }
+
 
   describe "with admin attribute set to 'true'" do
     before do

@@ -19,6 +19,7 @@ group :development, :test do
   gem 'guard-spork', '0.3.2'
   gem 'spork', '0.9.0'
   gem 'annotate', '2.5.0'
+  gem 'shoulda-matchers'
 end
 
 # Gems used only for assets and not required

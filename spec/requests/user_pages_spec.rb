@@ -49,7 +49,12 @@ describe "User pages" do
         it "should be able to delete another user" do
           expect { click_link('delete') }.to change(User, :count).by(-1)
         end
+
         it { should_not have_link('delete', href: user_path(admin)) }
+        # it { should have_link('delete', href: user_path(admin)) }
+        # it "should not be able to delete itself" do
+        #   expect { click_link('delete') }.to change(User, :count).by(-1)
+        # end
       end
     end
     
@@ -89,7 +94,7 @@ describe "User pages" do
         before do
           fill_in "Email",    with: "user@example.com"
           fill_in "Password", with: "foobar"
-          fill_in "Confirmation", with: "foobar"
+          fill_in "Confirm Password", with: "foobar"
         end
 
         it "should not create a user" do
@@ -107,7 +112,7 @@ describe "User pages" do
         before do
           fill_in "Name",     with: "Example User"
           fill_in "Password", with: "foobar"
-          fill_in "Confirmation", with: "foobar"
+          fill_in "Confirm Password", with: "foobar"
         end
 
         it "should not create a user" do
@@ -126,7 +131,7 @@ describe "User pages" do
         before do
           fill_in "Name",     with: "Example User"
           fill_in "Email",    with: "user@example.com"
-          fill_in "Confirmation", with: "foobar"
+          fill_in "Confirm Password", with: "foobar"
         end
 
         it "should not create a user" do
@@ -145,7 +150,7 @@ describe "User pages" do
           fill_in "Name",     with: "Example User"
           fill_in "Email",    with: "user@example.com"
           fill_in "Password", with: "fooba"
-          fill_in "Confirmation", with: "fooba"
+          fill_in "Confirm Password", with: "fooba"
         end
 
         it "should not create a user" do
@@ -222,7 +227,16 @@ describe "User pages" do
       it { should have_link('Sign out', href: signout_path) }
       specify { user.reload.name.should  == new_name }
       specify { user.reload.email.should == new_email }
-      # it { should have_content('error') }
+    end
+  end
+
+  describe "signed in user" do
+    let(:user) { FactoryGirl.create(:user) }
+    before { sign_in user }
+
+    describe "visits signup page" do
+      before { visit signup_path }
+      it { should be_home_page } 
     end
   end
 end
